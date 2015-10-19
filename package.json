@@ -1,0 +1,21 @@
+{
+  "name": "presnetation-cover",
+  "version": "1.0.0",
+  "description": "ISa presentation cover",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "browser-sync": "^2.9.11",
+    "autoprefixer": "^6.0.3",
+    "gulp-plumber": "^1.0.1",
+    "gulp": "^3.9.0",
+    "gulp-postcss": "^6.0.1",
+    "gulp-sass": "^2.0.4",
+    "normalize.css": "^3.0.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

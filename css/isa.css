@@ -1,0 +1,66 @@
+@import url(../node_modules/normalize.css/normalize.css);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+@import url(https://fonts.googleapis.com/css?family=Dosis:400,700);
+html {
+  height: 100%; }
+
+body {
+  margin: 0 auto;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  color: white;
+  background-color: #249ea6;
+  background-image: linear-gradient(to left, #ea4557, #ea4557 200px, #eb9e58 200px, #eb9e58 360px, #5a90b0 360px, #5a90b0 600px, #ecdc68 600px, #ecdc68 800px, #62b68e 800px, #62b68e 960px), url(../img/pattern.svg), url(../img/pattern-bottom.svg), linear-gradient(to bottom, rgba(0, 0, 0, 0.1), transparent 100%), linear-gradient(to bottom, #6a7098, #6a7098 50%, transparent, transparent 50%);
+  background-size: 960px 10px, 700px, 700px, 100% 20px, 100%;
+  background-repeat: repeat-x, repeat-x, repeat-x, repeat-x, repeat;
+  background-blend-mode: normal, multiply, multiply, normal, normal;
+  background-position: 0 0, 0 0, -330px bottom, 0 0, 0 0, 0 0; }
+
+h1 {
+  color: white;
+  position: absolute;
+  font-size: 2.8em;
+  font-weight: 700;
+  left: 0;
+  right: 0;
+  top: calc( 50% - ((((5rem  * 1.414213562373095) - (((0.5rem * 2) * 1.414213562373095) - (0.5rem * 2))) / 2) * 3.5));
+  height: calc((5rem  * 1.414213562373095) - (((0.5rem * 2) * 1.414213562373095) - (0.5rem * 2)));
+  line-height: calc((5rem  * 1.414213562373095) - (((0.5rem * 2) * 1.414213562373095) - (0.5rem * 2)));
+  margin: 0; }
+
+p {
+  margin: 0;
+  color: #515F67;
+  background: white;
+  height: calc((5rem  * 1.414213562373095) - (((0.5rem * 2) * 1.414213562373095) - (0.5rem * 2)));
+  line-height: calc((5rem  * 1.414213562373095) - (((0.5rem * 2) * 1.414213562373095) - (0.5rem * 2)));
+  position: absolute;
+  top: calc( 50% - (((5rem  * 1.414213562373095) - (((0.5rem * 2) * 1.414213562373095) - (0.5rem * 2))) / 2));
+  left: 50%;
+  margin-left: -9em;
+  min-width: 18em;
+  text-align: center;
+  font-size: 1.6em; }
+  p:after, p:before {
+    content: " ";
+    transform: rotate(45deg);
+    transform-origin: 0px 0px;
+    background-color: white;
+    width: 5rem;
+    height: 5rem;
+    top: calc(((0.5rem * 1.414213562373095) - 0.5rem) * -1);
+    left: 0px;
+    position: absolute;
+    border-radius: 0.5rem;
+    z-index: -1; }
+  p:before {
+    left: 100%; }
+
+footer {
+  font-family: 'Dosis', sans-serif;
+  position: absolute;
+  text-align: center;
+  left: 0;
+  right: 0;
+  bottom: 4em; }

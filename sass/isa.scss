@@ -1,0 +1,132 @@
+@import "../node_modules/normalize.css/normalize.css";
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+@import url(https://fonts.googleapis.com/css?family=Dosis:400,700);
+
+$author-height: 5rem;
+$author-radius: .5rem;
+$author-bg-color: white;
+
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+
+$color-font: white;
+$color-font-alt: #515F67;
+
+$color-background-top: #6a7098;
+$color-background-bottom: #249ea6;
+
+$color-background-stripe-01: #ea4557;
+$color-background-stripe-02: #eb9e58;
+$color-background-stripe-03: #5a90b0;
+$color-background-stripe-04: #ecdc68;
+$color-background-stripe-05: #62b68e;
+
+
+@mixin rounded-hexagon($hexagon-height: 5rem, $hexagon-radius: .5rem, $hexagon-bg-color: white, $hexagon-font-size: 1.6em, $hexagon-color:#515F67 ) {
+
+  margin: 0;
+  color: $hexagon-color;
+  background: $hexagon-bg-color;
+  height: calc((#{$hexagon-height}  * 1.414213562373095) - (((#{$hexagon-radius} * 2) * 1.414213562373095) - (#{$hexagon-radius} * 2)));
+  line-height: calc((#{$hexagon-height}  * 1.414213562373095) - (((#{$hexagon-radius} * 2) * 1.414213562373095) - (#{$hexagon-radius} * 2)));
+  position: absolute;
+  top: calc( 50% - (((#{$hexagon-height}  * 1.414213562373095) - (((#{$hexagon-radius} * 2) * 1.414213562373095) - (#{$hexagon-radius} * 2))) / 2));
+  left: 50%;
+  margin-left: -9em;
+  min-width: 18em;
+  text-align: center;
+  font-size: $hexagon-font-size;
+
+  &:after, &:before{
+    content: " ";
+    transform: rotate(45deg);
+    transform-origin: 0px 0px;
+    background-color:$hexagon-bg-color;
+    width: $hexagon-height; 
+    height:$hexagon-height; 
+    top: calc(((#{$hexagon-radius} * 1.414213562373095) - #{$hexagon-radius}) * -1);
+    left: 0px;
+    position:absolute;
+    border-radius: #{$hexagon-radius};
+    z-index: -1;
+  }
+  &:before{
+    left: 100%;
+  }
+}
+
+
+html{
+  height: 100%;
+}
+
+body{
+  margin: 0 auto;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: $font-weight-normal;
+  color: $color-font;
+  background-color: $color-background-bottom;
+  background-image: 
+  linear-gradient(to left, 
+                  $color-background-stripe-01, $color-background-stripe-01 200px, 
+                  $color-background-stripe-02 200px, $color-background-stripe-02 360px, 
+                  $color-background-stripe-03 360px, $color-background-stripe-03 600px, 
+                  $color-background-stripe-04 600px, $color-background-stripe-04 800px, 
+                  $color-background-stripe-05 800px, $color-background-stripe-05 960px
+                  ),
+                  url(../img/pattern.svg),
+                  url(../img/pattern-bottom.svg),
+  linear-gradient(to bottom, rgba(0,0,0,.1), transparent 100%),
+  linear-gradient(to bottom, $color-background-top, $color-background-top 50%, transparent, transparent 50%);
+  background-size: 960px 10px, 700px,700px, 100% 20px,  100%;
+  background-repeat: repeat-x, repeat-x, repeat-x, repeat-x, repeat;
+  background-blend-mode: normal, multiply, multiply, normal, normal;
+  background-position: 0 0, 0 0, -330px bottom , 0 0, 0 0, 0 0;
+}
+
+h1{
+  color: white;
+  position: absolute;
+  font-size: 2.8em;
+  font-weight: $font-weight-bold;
+  left: 0;
+  right: 0;
+  top: calc( 50% - ((((#{$author-height}  * 1.414213562373095) - (((#{$author-radius} * 2) * 1.414213562373095) - (#{$author-radius} * 2))) / 2) * 3.5));
+  height: calc((#{$author-height}  * 1.414213562373095) - (((#{$author-radius} * 2) * 1.414213562373095) - (#{$author-radius} * 2)));
+  line-height: calc((#{$author-height}  * 1.414213562373095) - (((#{$author-radius} * 2) * 1.414213562373095) - (#{$author-radius} * 2)));
+  margin: 0;
+}
+
+p {
+  @include rounded-hexagon();
+}
+
+footer{
+  font-family: 'Dosis', sans-serif;
+  position: absolute;
+  text-align: center;
+  left: 0;
+  right: 0;
+  bottom: 4em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
